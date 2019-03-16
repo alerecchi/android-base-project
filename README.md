@@ -11,5 +11,13 @@ The project includes already these following library configured:
 * Room DataBase
 * Gradle Versions Plugin by Ben Manes to check dependency updates (since standard lint doesn't work with the buildSrc setup)
 * RxJava + RxAndroid
+* RecyclerView base setup to handle multiple types of Viewholders (+ sort of Viewholder lifecycle out of the box)
 
 More libraries alredy defined and ready to use
+
+## How to use
+Download the project and before opening it with Android Studio rename these folders reflecting the new project name and package:
+* Root project folder
+* Folders inside src/main, src/test, src/androidTest
+
+After this open the project in Android Studio and replace all occurrencies of "alerecchi" and/or "baseproject" with the new project name
