@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+androidExtensions {
+    experimental = true
+}
+
+android {
+    lintOptions {
+        disable 'ParcelCreator'
+        abortOnError false
+        enable 'LogConditional'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    compileSdkVersion ProjectValues.targetSdkVersion
+
+    defaultConfig {
+        applicationId "com.alerecchi.baseproject"
+        minSdkVersion ProjectValues.minSdkVersion
+        targetSdkVersion ProjectValues.targetSdkVersion
+        versionCode ProjectValues.versionCode
+        versionName ProjectValues.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation PrjDependencies.kotlin
+
+    implementation PrjDependencies.supportAppCompat
+    implementation PrjDependencies.coreKtX
+    implementation PrjDependencies.constraintLayout
+
+    implementation PrjDependencies.dagger
+    implementation PrjDependencies.daggerAndroid
+    implementation PrjDependencies.daggerAndroidSupport
+
+    implementation PrjDependencies.gson
+    implementation PrjDependencies.okHttp
+    implementation PrjDependencies.retrofit
+    implementation PrjDependencies.retrofitGson
+    implementation PrjDependencies.retrofitRxJava
+
+    implementation PrjDependencies.room
+    implementation PrjDependencies.roomRxJava
+
+    implementation PrjDependencies.rxAndroid
+    implementation PrjDependencies.rxJava
+
+    kapt AnnotationProcessors.dagger
+    kapt AnnotationProcessors.daggerAndroid
+    kapt AnnotationProcessors.room
+
+}
