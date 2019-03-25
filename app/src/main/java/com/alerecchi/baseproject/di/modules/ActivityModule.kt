@@ -1,7 +1,7 @@
 package com.alerecchi.baseproject.di.modules
 
-import com.alerecchi.baseproject.MainActivity
 import com.alerecchi.baseproject.di.scope.ActivityScoped
+import com.alerecchi.baseproject.presentation.view.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

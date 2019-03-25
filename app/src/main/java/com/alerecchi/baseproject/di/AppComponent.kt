@@ -1,7 +1,7 @@
 package com.alerecchi.baseproject.di
 
-import com.alerecchi.baseproject.BaseApplication
 import com.alerecchi.baseproject.di.modules.*
+import com.alerecchi.baseproject.presentation.BaseApplication
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector

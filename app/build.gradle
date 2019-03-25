@@ -55,9 +55,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation PrjDependencies.kotlin
 
-    implementation PrjDependencies.supportAppCompat
-    implementation PrjDependencies.coreKtX
+    implementation PrjDependencies.appCompat
+    implementation PrjDependencies.coreKtx
     implementation PrjDependencies.constraintLayout
+    implementation PrjDependencies.recyclerView
 
     implementation PrjDependencies.dagger
     implementation PrjDependencies.daggerAndroid
@@ -74,9 +75,14 @@ dependencies {
 
     implementation PrjDependencies.rxAndroid
     implementation PrjDependencies.rxJava
+    implementation PrjDependencies.rxRelay
 
     kapt AnnotationProcessors.dagger
     kapt AnnotationProcessors.daggerAndroid
     kapt AnnotationProcessors.room
 
+    testImplementation TestDependencies.jUnit
+    testImplementation TestDependencies.mockitoKotlin
+    testImplementation TestDependencies.assertJ
+    testImplementation TestDependencies.okHttpMock
 }

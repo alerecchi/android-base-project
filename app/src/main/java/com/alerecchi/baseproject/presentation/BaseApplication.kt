@@ -1,4 +1,4 @@
-package com.alerecchi.baseproject
+package com.alerecchi.baseproject.presentation
 
 import com.alerecchi.baseproject.di.DaggerAppComponent
 import dagger.android.AndroidInjector

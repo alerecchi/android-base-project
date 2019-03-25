@@ -20,4 +20,5 @@ Download the project and before opening it with Android Studio rename these fold
 * Root project folder
 * Folders inside src/main, src/test, src/androidTest
 
-After this open the project in Android Studio and replace all occurrencies of "alerecchi" and/or "baseproject" with the new project name
+After this open the project in Android Studio and replace all occurrencies of "alerecchi" and/or "baseproject" with the new project name.
+To change the app name replace it in the manifest.

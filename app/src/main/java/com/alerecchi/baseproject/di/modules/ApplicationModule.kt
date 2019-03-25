@@ -1,7 +1,7 @@
 package com.alerecchi.baseproject.di.modules
 
 import android.content.Context
-import com.alerecchi.baseproject.BaseApplication
+import com.alerecchi.baseproject.presentation.BaseApplication
 import dagger.Binds
 import dagger.Module
 
